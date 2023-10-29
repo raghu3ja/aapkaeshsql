@@ -76,16 +76,16 @@ CREATE TABLE `cart` (
   `id` int NOT NULL,
   `shop_id` varchar(11) NOT NULL,
   `user_id` varchar(11) NOT NULL,
-  `product_id` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `product_name` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `price` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `qty` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `product_id` varchar(250)  NOT NULL,
+  `product_name` varchar(250)  NOT NULL,
+  `price` varchar(250)  NOT NULL,
+  `qty` varchar(250)  NOT NULL,
   `total_price` varchar(20) NOT NULL,
   `name` varchar(55) NOT NULL,
   `tel` varchar(20) NOT NULL,
   `email` varchar(55) NOT NULL,
   `city` varchar(55) NOT NULL,
-  `address` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `address` varchar(250) NOT NULL,
   `cdate` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
@@ -219,7 +219,7 @@ INSERT INTO `otp_msg` (`id`, `mobile`, `message`, `otp`, `msg_time`) VALUES
 
 CREATE TABLE `product` (
   `p_id` int NOT NULL,
-  `shop_id` varchar(111) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `shop_id` varchar(111)  NOT NULL,
   `product_name` varchar(111) NOT NULL,
   `mrp` varchar(111) NOT NULL,
   `discount_mrp` varchar(111) NOT NULL,
@@ -286,11 +286,11 @@ CREATE TABLE `shopkeeper_register` (
   `id` int NOT NULL,
   `name` varchar(111) NOT NULL,
   `email` varchar(111) NOT NULL,
-  `mobile` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `mobile` varchar(20)  NOT NULL,
   `shop_name` varchar(111) NOT NULL,
   `cat_id` varchar(111) NOT NULL,
   `address` varchar(111) NOT NULL,
-  `pincode` varchar(111) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `pincode` varchar(111)  NOT NULL,
   `password` varchar(111) NOT NULL,
   `shop_img` varchar(111) NOT NULL,
   `cdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -410,13 +410,11 @@ INSERT INTO `shopkeeper_subscription` (`id`, `shopkeeper_id`, `next_due_date`, `
 (95, 115, '2021-06-13', '2021-05-13 18:30:00'),
 (96, 116, '2021-06-13', '2021-05-13 18:30:00'),
 (97, 76, '2023-06-01', '2021-05-11 18:30:00'),
-(98, 0, '0000-00-00', '2023-10-03 18:30:00'),
+
+  
 (99, 122, '0000-00-00', '2023-10-04 18:30:00'),
-(100, 0, '2023-11-11', '2023-10-11 18:30:00'),
-(101, 0, '2023-11-11', '2023-10-11 18:30:00'),
-(102, 0, '2023-11-11', '2023-10-11 18:30:00'),
-(103, 0, '2023-11-14', '2023-10-14 18:30:00'),
-(104, 0, '2023-11-14', '2023-10-14 18:30:00');
+
+  
 
 -- --------------------------------------------------------
 
