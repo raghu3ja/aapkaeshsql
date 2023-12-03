@@ -42,7 +42,6 @@ CREATE TABLE `admin_tb` (
 INSERT INTO `admin_tb` (`id`, `username`, `email`, `password`) VALUES
 (1, 'admin', 'admin@gmail.com', 'Gagan8008#'),
 (2, 'admin', 'admin@gmail.com', 'Gagan8008#'),
-(0, '', '', ''),
 (0, 'raghuadmin', 'bhavaji12@gmail.com', '9704249369');
 
 -- --------------------------------------------------------
